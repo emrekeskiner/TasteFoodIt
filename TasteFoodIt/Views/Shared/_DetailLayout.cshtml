@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("~/Views/Default/PartialHead.cshtml")
+<body>
+
+    @Html.Action("PartialNavbarInfo", "Default")
+
+    @Html.Action("PartialNavbar", "Default")
+
+
+    <!-- END nav -->
+
+
+
+    @RenderBody()
+
+
+    @Html.Partial("~/Views/Default/PartialFooter.cshtml")
+
+    @Html.Partial("~/Views/Default/PartialScript.cshtml")
+
+</body>
+</html>

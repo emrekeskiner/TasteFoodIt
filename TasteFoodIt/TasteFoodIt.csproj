@@ -293,9 +293,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Templates\tasteit-master\.DS_Store" />
     <Content Include="Templates\tasteit-master\css\.DS_Store" />
     <Content Include="Templates\tasteit-master\fonts\.DS_Store" />
@@ -407,6 +404,14 @@
     <Content Include="Views\Default\PartialScript.cshtml" />
     <Content Include="Views\Default\PartialNavbarInfo.cshtml" />
     <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialSlider.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialMenu.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialChef.cshtml" />
+    <Content Include="Views\Shared\_DetailLayout.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialReservationNow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
