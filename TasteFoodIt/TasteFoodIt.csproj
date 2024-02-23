@@ -414,6 +414,10 @@
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Default\PartialReservationNow.cshtml" />
     <Content Include="Views\Detail\Contact.cshtml" />
+    <Content Include="Views\Detail\Chef.cshtml" />
+    <Content Include="Views\Detail\Menu.cshtml" />
+    <Content Include="Views\Detail\About.cshtml" />
+    <Content Include="Views\Default\PartialInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
