@@ -37,5 +37,10 @@ namespace TasteFoodIt.Controllers
         {
             return View();
         }
+
+        public ActionResult Reservation()
+        {
+            return View();
+        }
     }
 }
