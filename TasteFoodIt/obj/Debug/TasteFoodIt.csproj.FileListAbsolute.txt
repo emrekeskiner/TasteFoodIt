@@ -81,3 +81,9 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.CopyComplete
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.dll
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.pdb
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.mig1.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.GenerateResource.cache
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.mig2.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.AddSocialMedia.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.AddStatus_SocialMedia_Class.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.RenameRezervation_Reservation.resources

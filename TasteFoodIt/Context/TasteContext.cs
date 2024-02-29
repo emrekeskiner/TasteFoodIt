@@ -16,8 +16,10 @@ namespace TasteFoodIt.Context
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<OpenDayHour> OpenDayHours { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Rezervation> Rezervations { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
 
     }
 }

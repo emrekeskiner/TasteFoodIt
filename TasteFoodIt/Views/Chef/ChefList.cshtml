@@ -1,0 +1,58 @@
+﻿@model List<TasteFoodIt.Entities.Chef>
+@{
+    ViewBag.Title = "ChefList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Şef Listesi</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item">Şefler</li>
+            <li class="breadcrumb-item active" aria-current="page">Şef Listesi</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <!-- Simple Tables -->
+            <div class="card">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary"><a href="/Chef/CreateChef/" class="btn btn-sm btn-primary">Şef Ekle</a></h6>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Adı Soyadı</th>
+                                <th>Görevi</th>
+                                <th>Resim</th>
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ChefId</td>
+                                    <td>@item.NameSurname</td>
+                                    <td>@item.Title</td>
+                                    <td><img src="@item.ImageUrl" style="height:50px;width:50px;" class="rounded mx-auto d-block" alt="@item.ImageUrl"></td>
+                                    @*<td><span class="badge badge-success">Delivered</span></td>*@
+                                    <td><a href="/Chef/DeleteChef/@item.ChefId" class="btn btn-sm btn-danger">Sil</a></td>
+                                    <td><a href="/Chef/UpdateChef/@item.ChefId" class="btn btn-sm btn-success">Güncelle</a></td>
+                                </tr>
+                            }
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

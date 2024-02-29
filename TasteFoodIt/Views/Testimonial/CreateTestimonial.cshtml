@@ -1,0 +1,56 @@
+﻿@model TasteFoodIt.Entities.Testimonial
+@{
+    ViewBag.Title = "CreateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Referans Ekle</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item">Referanslar</li>
+            <li class="breadcrumb-item active" aria-current="page">Referans İşlemleri</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Form Basic -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Ekleme Paneli</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Adı Soyadı</label>
+                            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", placeholder = "Adı Soyadı Giriniz" })
+
+                        </div>
+                        <div class="form-group">
+                            <label>Meslek</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Mesleği Giriniz" })
+
+                        </div>
+                        <div class="form-group">
+                            <label>Resim URL</label>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", placeholder = "Resim Url Giriniz" })
+
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control",rows=3 ,placeholder = "Açıklama Giriniz" })
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

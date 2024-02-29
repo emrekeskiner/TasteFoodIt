@@ -13,8 +13,8 @@ namespace TasteFoodIt.Controllers
         // GET: Detail
         public ActionResult Contact()
         {
-            @ViewBag.pageName = "İletişim";
-            ViewBag.localAddress = context.Addresses.Select(x => x.LocalAddress).FirstOrDefault();
+            ViewBag.pageName = "İletişim";
+            ViewBag.locale = context.Addresses.Select(x => x.Locale).FirstOrDefault();
             ViewBag.phone = context.Addresses.Select(x => x.Phone).FirstOrDefault();
             ViewBag.email = context.Addresses.Select(x => x.Email).FirstOrDefault();
             ViewBag.webSite = context.Addresses.Select(x => x.WebSite).FirstOrDefault();
@@ -24,27 +24,27 @@ namespace TasteFoodIt.Controllers
 
         public ActionResult Chef()
         {
-            @ViewBag.pageName = "Şeflerimiz";
+            ViewBag.pageName = "Şeflerimiz";
             var chef = context.Chefs.ToList();
             return View(chef);
         }
 
         public ActionResult Menu()
         {
-            @ViewBag.pageName = "Menü";
+            ViewBag.pageName = "Menü";
             var menu = context.Products.ToList();
             return View(menu);
         }
 
         public ActionResult About()
         {
-            @ViewBag.pageName = "Hakkımızda";
+            ViewBag.pageName = "Hakkımızda";
             return View();
         }
 
         public ActionResult Reservation()
         {
-            @ViewBag.pageName = "Rezervasyon";
+            ViewBag.pageName = "Rezervasyon";
             return View();
         }
     }

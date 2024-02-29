@@ -5,16 +5,16 @@ using System.Web;
 
 namespace TasteFoodIt.Entities
 {
-    public class Rezervation
+    public class Reservation
     {
-        public int RezervationId { get; set; }
+        public int ReservationId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public DateTime RezervationDate { get; set; }
+        public DateTime ReservationDate { get; set; }
         public string time { get; set; }
         public string GuestCount { get; set; }
-        public string RezervationStatus { get; set; }
+        public string ReservationStatus { get; set; }
 
     }
 }

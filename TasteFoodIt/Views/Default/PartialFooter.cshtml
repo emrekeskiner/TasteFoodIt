@@ -1,31 +1,8 @@
 ﻿<footer class="ftco-footer ftco-no-pb ftco-section">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Bizi Takip Edin</h2>
-                    <p>Sosyal medya hesaplarımızı takip ederek günlük fırsatlarımızdan faydalanabilir ve yeniliklerimizden haberdar olabilirsiniz.</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                        <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Çalışma Saati</h2>
-                    <ul class="list-unstyled open-hours">
-                        <li class="d-flex"><span>Pazartesi</span><span>9:00 - 24:00</span></li>
-                        <li class="d-flex"><span>Salı</span><span>9:00 - 24:00</span></li>
-                        <li class="d-flex"><span>Çarşamba</span><span>9:00 - 24:00</span></li>
-                        <li class="d-flex"><span>Perşembe</span><span>9:00 - 24:00</span></li>
-                        <li class="d-flex"><span>Cuma</span><span>9:00 - 02:00</span></li>
-                        <li class="d-flex"><span>Cumartesi</span><span>9:00 - 02:00</span></li>
-                        <li class="d-flex"><span>Pazar</span><span> Kapalı</span></li>
-                    </ul>
-                </div>
-            </div>
+            @Html.Action("PartialSocialMedia", "Default")
+            @Html.Action("PartialOpenDayHour", "Default")
             <div class="col-md-6 col-lg-3">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Instagram</h2>

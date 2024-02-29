@@ -1,0 +1,55 @@
+﻿@model TasteFoodIt.Entities.Address
+@{
+    ViewBag.Title = "AddressList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Adres Güncelle</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item">Adres</li>
+            <li class="breadcrumb-item active" aria-current="page">Adres İşlemleri</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Form Basic -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Adres Paneli</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            @Html.HiddenFor(x => x.AddressId)
+                            <label>Email</label>
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Email Giriniz" })
+                            <br />
+                            <label>Telefon</label>
+                            @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", placeholder = "Telefon Giriniz" })
+                            <br />
+                            <label>Web Adresi</label>
+                            @Html.TextBoxFor(x => x.WebSite, new { @class = "form-control", placeholder = "Web adresi Giriniz" })
+                            <br />
+                            <label>Adres</label>
+                            @Html.TextBoxFor(x => x.Locale, new { @class = "form-control", placeholder = "Adres Giriniz" })
+                            <br />
+                            <label>Açıklama</label>
+                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control", rows = 4, placeholder = "Açıklama Giriniz" })
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

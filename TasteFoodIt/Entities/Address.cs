@@ -11,7 +11,7 @@ namespace TasteFoodIt.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Description { get; set; }
-        public string LocalAddress { get; set; }
+        public string Locale { get; set; }
         public string WebSite { get; set; }
 
 
