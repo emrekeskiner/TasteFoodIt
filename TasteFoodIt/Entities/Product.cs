@@ -13,7 +13,6 @@ namespace TasteFoodIt.Entities
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
-
         public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; }

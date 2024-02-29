@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "ProductList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
 <div class="container-fluid" id="container-wrapper">
@@ -38,6 +39,7 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
+                                count++;
 
                                 string durum = "";
                                 string durumYazi = "";
@@ -52,13 +54,12 @@
                                     durumYazi = "Aktif";
                                 }
                                 <tr>
-                                    <td>@item.ProductId</td>
+                                    <td>@count</td>
                                     <td>@item.ProductName</td>
                                     <td>@item.Category.CategoryName</td>
                                     <td>@item.Price</td>
                                     <td><a href="/Product/StatusChangeProduct/@item.ProductId"> <span class="badge @durum" style="color:white">@durumYazi</span></a></td>
                                     <td><img src="@item.ImageUrl" style="height:50px;width:50px;" class="rounded mx-auto d-block" alt="@item.ImageUrl"></td>
-                                    @*<td><span class="badge badge-success">Delivered</span></td>*@
                                     <td><a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-sm btn-danger">Sil</a></td>
                                     <td><a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-sm btn-success">Güncelle</a></td>
                                 </tr>

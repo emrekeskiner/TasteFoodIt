@@ -27,6 +27,7 @@ namespace TasteFoodIt.Controllers
                                                  Text = i.CategoryName,
                                                  Value = i.CategoryId.ToString()
                                              }).ToList();
+            category.Add(new SelectListItem { Text = "Seçiniz", Value = "0" });
             ViewBag.category = category;
             return View();
         }

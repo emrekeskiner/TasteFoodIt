@@ -10,10 +10,14 @@
         <div class="row">
             @foreach (var item in Model)
             {
-            <div class="col-md-6 col-lg-4">
+               
+
+
+               <div class="col-md-6 col-lg-4">
+
                 <div class="menu-wrap">
                     <div class="heading-menu text-center ftco-animate">
-                        <h3>Breakfast</h3>
+                        <h3>@item.Category.CategoryName</h3>
                     </div>
                     <div class="menus d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(@item.ImageUrl);"></div>
