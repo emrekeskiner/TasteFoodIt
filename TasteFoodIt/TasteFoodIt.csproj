@@ -140,6 +140,7 @@
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OpenDayHourController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entities\About.cs" />
@@ -175,6 +176,18 @@
     <Compile Include="Migrations\202402291206455_RenameRezervation_Reservation.cs" />
     <Compile Include="Migrations\202402291206455_RenameRezervation_Reservation.designer.cs">
       <DependentUpon>202402291206455_RenameRezervation_Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291248347_Add_product_category_relation.cs" />
+    <Compile Include="Migrations\202402291248347_Add_product_category_relation.designer.cs">
+      <DependentUpon>202402291248347_Add_product_category_relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291249172_Add_product_category_relation1.cs" />
+    <Compile Include="Migrations\202402291249172_Add_product_category_relation1.designer.cs">
+      <DependentUpon>202402291249172_Add_product_category_relation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291607156_Add_product_category_relation2.cs" />
+    <Compile Include="Migrations\202402291607156_Add_product_category_relation2.designer.cs">
+      <DependentUpon>202402291607156_Add_product_category_relation2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -4828,6 +4841,9 @@
     <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
     <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
     <Content Include="Views\Default\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Product\CreateProduct.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4864,6 +4880,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402291206455_RenameRezervation_Reservation.resx">
       <DependentUpon>202402291206455_RenameRezervation_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291248347_Add_product_category_relation.resx">
+      <DependentUpon>202402291248347_Add_product_category_relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291249172_Add_product_category_relation1.resx">
+      <DependentUpon>202402291249172_Add_product_category_relation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291607156_Add_product_category_relation2.resx">
+      <DependentUpon>202402291607156_Add_product_category_relation2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

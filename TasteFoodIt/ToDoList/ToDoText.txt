@@ -1,15 +1,7 @@
-﻿Ana Sayfa Partiallara Ayrılacak
-Veriler Dinamik Hale Getirilecek
+﻿
 Rezervasyon yapılacak
-Admin Paneli Kurulacak
-Layout Yapısı Kurulacak
 Session- Admin
-401-404 Sayfaları yer alacak
 Validasyon
-Crud İşlemleri
-Viewbag
-CodeFirstte ekstra tablo ekleme
-Code First tablo silme
 Dashboard Mini
 Code First İlişkili tablo
 Mailkit
