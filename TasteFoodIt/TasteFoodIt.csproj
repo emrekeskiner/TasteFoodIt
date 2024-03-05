@@ -140,8 +140,10 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Controllers\OpenDayHourController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entities\About.cs" />
@@ -150,6 +152,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\OpenDayHour.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
@@ -189,6 +192,18 @@
     <Compile Include="Migrations\202402291607156_Add_product_category_relation2.cs" />
     <Compile Include="Migrations\202402291607156_Add_product_category_relation2.designer.cs">
       <DependentUpon>202402291607156_Add_product_category_relation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403010821160_ReservationTimeAdded.cs" />
+    <Compile Include="Migrations\202403010821160_ReservationTimeAdded.designer.cs">
+      <DependentUpon>202403010821160_ReservationTimeAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051711074_add_NotificationEntity.cs" />
+    <Compile Include="Migrations\202403051711074_add_NotificationEntity.designer.cs">
+      <DependentUpon>202403051711074_add_NotificationEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051740072_add_NotificationEntity_colums_color.cs" />
+    <Compile Include="Migrations\202403051740072_add_NotificationEntity_colums_color.designer.cs">
+      <DependentUpon>202403051740072_add_NotificationEntity_colums_color.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -4846,6 +4861,10 @@
     <Content Include="Views\Product\CreateProduct.cshtml" />
     <Content Include="Views\Product\UpdateProduct.cshtml" />
     <Content Include="Views\Dashboard\DashboardList.cshtml" />
+    <Content Include="Views\Default\PartialReservationDefault.cshtml" />
+    <Content Include="Views\Product\Products.cshtml" />
+    <Content Include="Views\Reservation\ReservationList.cshtml" />
+    <Content Include="Views\Notification\NotificationList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4891,6 +4910,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402291607156_Add_product_category_relation2.resx">
       <DependentUpon>202402291607156_Add_product_category_relation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403010821160_ReservationTimeAdded.resx">
+      <DependentUpon>202403010821160_ReservationTimeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051711074_add_NotificationEntity.resx">
+      <DependentUpon>202403051711074_add_NotificationEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051740072_add_NotificationEntity_colums_color.resx">
+      <DependentUpon>202403051740072_add_NotificationEntity_colums_color.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

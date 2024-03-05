@@ -96,5 +96,10 @@ namespace TasteFoodIt.Controllers
             var value = context.SocialMedias.ToList();
             return PartialView(value);
         }
+
+        public PartialViewResult PartialReservationDefault()
+        {
+            return PartialView();
+        }
     }
 }

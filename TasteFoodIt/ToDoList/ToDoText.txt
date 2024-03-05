@@ -3,5 +3,4 @@ Rezervasyon yapılacak
 Session- Admin
 Validasyon
 Dashboard Mini
-Code First İlişkili tablo
 Mailkit

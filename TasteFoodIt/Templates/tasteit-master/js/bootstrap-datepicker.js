@@ -153,7 +153,7 @@
 			// fallback to 2 letter code eg "de"
 			var lang = o.language;
 			if (!dates[lang]){
-				lang = lang.split('-')[0];
+				lang = lang.split('tr-TR')[0];
 				if (!dates[lang])
 					lang = defaults.language;
 			}
@@ -1396,7 +1396,7 @@
 		daysOfWeekDisabled: [],
 		endDate: Infinity,
 		forceParse: true,
-		format: 'mm/dd/yyyy',
+		format: 'dd/MM/yyyy',
 		keyboardNavigation: true,
 		language: 'en',
 		minViewMode: 0,

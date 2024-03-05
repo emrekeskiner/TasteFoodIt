@@ -27,7 +27,7 @@ namespace TasteFoodIt.Controllers
                                                  Text = i.CategoryName,
                                                  Value = i.CategoryId.ToString()
                                              }).ToList();
-            category.Add(new SelectListItem { Text = "Seçiniz", Value = "0" });
+            category.Add(new SelectListItem { Text = "SEÇİNİZ", Value = "0", Selected=true });
             ViewBag.category = category;
             return View();
         }
@@ -35,8 +35,7 @@ namespace TasteFoodIt.Controllers
         [HttpPost]
         public ActionResult CreateProduct(Product product)
         {
-            var category = context.Categories.Where(m => m.CategoryId == product.Category.CategoryId).FirstOrDefault();
-            product.Category = category;
+            
             product.IsActive = true;
             context.Products.Add(product);
             context.SaveChanges();
@@ -96,5 +95,12 @@ namespace TasteFoodIt.Controllers
             context.SaveChanges();
             return RedirectToAction("ProductList");
         }
+
+        public ActionResult Products(int id)
+        {
+            var value = context.Products.Where(x=>x.CategoryId==id).ToList();
+            return View(value);
+        }
+
     }
 }

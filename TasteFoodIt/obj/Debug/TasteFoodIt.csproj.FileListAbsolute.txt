@@ -90,3 +90,6 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrati
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.Add_product_category_relation.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.Add_product_category_relation1.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.Add_product_category_relation2.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.ReservationTimeAdded.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity_colums_color.resources

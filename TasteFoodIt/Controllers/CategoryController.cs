@@ -35,6 +35,12 @@ namespace TasteFoodIt.Controllers
         public ActionResult DeleteCategory(int id)
         {
             var category = context.Categories.Find(id);
+            var urun = context.Products.Where(x => x.CategoryId == id).Count();
+            if (urun > 0)
+            {
+                ViewBag.productCount = "Kategori silmek içi öncelikle ürünleri silmelisiniz";
+                return RedirectToAction("CategoryList");
+            }
             context.Categories.Remove(category);
             context.SaveChanges();
             return RedirectToAction("CategoryList");
