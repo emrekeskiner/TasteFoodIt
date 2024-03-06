@@ -27,5 +27,29 @@ namespace TasteFoodIt.Controllers
             context.SaveChanges();
             return View(values);
         }
+
+        [HttpPost]
+        public JsonResult AddMailList(Mail mail)
+        {
+            System.Threading.Thread.Sleep(500);//AZ BEKLE
+            mail.Status = true;
+            context.Mails.Add(mail);
+            context.SaveChanges();
+
+            return Json("başarılı", JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult CreateContact(Contact contact)
+        {
+            System.Threading.Thread.Sleep(500);//AZ BEKLE
+            contact.SendDate = DateTime.Now;
+            contact.Status = false;
+            context.Contacts.Add(contact);
+            context.SaveChanges();
+
+            return Json("başarılı", JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

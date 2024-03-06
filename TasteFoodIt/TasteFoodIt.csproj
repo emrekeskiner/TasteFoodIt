@@ -152,6 +152,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Mail.cs" />
     <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\OpenDayHour.cs" />
     <Compile Include="Entities\Product.cs" />
@@ -204,6 +205,10 @@
     <Compile Include="Migrations\202403051740072_add_NotificationEntity_colums_color.cs" />
     <Compile Include="Migrations\202403051740072_add_NotificationEntity_colums_color.designer.cs">
       <DependentUpon>202403051740072_add_NotificationEntity_colums_color.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403061022317_add_MailClass.cs" />
+    <Compile Include="Migrations\202403061022317_add_MailClass.designer.cs">
+      <DependentUpon>202403061022317_add_MailClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1935,6 +1940,7 @@
     <Content Include="Templates\ruang-admin\vendor\fontawesome-free\webfonts\fa-brands-400.svg" />
     <Content Include="Templates\ruang-admin\vendor\fontawesome-free\webfonts\fa-regular-400.svg" />
     <Content Include="Templates\ruang-admin\vendor\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Templates\ruang-admin\vendor\formjs\forms.js" />
     <Content Include="Templates\ruang-admin\vendor\jquery-easing\jquery.easing.compatibility.js" />
     <Content Include="Templates\ruang-admin\vendor\jquery-easing\jquery.easing.js" />
     <Content Include="Templates\ruang-admin\vendor\jquery-easing\jquery.easing.min.js" />
@@ -4919,6 +4925,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403051740072_add_NotificationEntity_colums_color.resx">
       <DependentUpon>202403051740072_add_NotificationEntity_colums_color.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403061022317_add_MailClass.resx">
+      <DependentUpon>202403061022317_add_MailClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

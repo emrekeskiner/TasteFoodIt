@@ -39,14 +39,18 @@ namespace TasteFoodIt.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult CreateReservation(Reservation reservation)
+        public JsonResult CreateReservation(Reservation reservation)
         {
             reservation.ReservationStatus = "Dolu";
             //reservation.ReservationDate
             context.Reservations.Add(reservation);
             context.SaveChanges();
-            return null;
+
+            return Json(reservation, JsonRequestBehavior.AllowGet);
         }
+
+       
     }
 }

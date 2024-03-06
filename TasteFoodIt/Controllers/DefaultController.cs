@@ -93,7 +93,7 @@ namespace TasteFoodIt.Controllers
 
         public PartialViewResult PartialSocialMedia()
         {
-            var value = context.SocialMedias.ToList();
+            var value = context.SocialMedias.Where(x=>x.Status==true).ToList();
             return PartialView(value);
         }
 

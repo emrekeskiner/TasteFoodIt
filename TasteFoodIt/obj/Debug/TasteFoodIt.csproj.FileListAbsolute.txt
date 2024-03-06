@@ -93,3 +93,4 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrati
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.ReservationTimeAdded.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity_colums_color.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_MailClass.resources
