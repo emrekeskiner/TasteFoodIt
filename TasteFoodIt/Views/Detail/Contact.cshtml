@@ -64,36 +64,3 @@
         </div>
     </div>
 </section>
-
-@*<script>
-    $(document).ready(function () {
-        $("#btnMsjGonder").click(function () {
-
-            var contact = $("#contactForm").serialize;
-            $.ajax({
-                type: "POST",
-                url: "/Contact/CreateContact",
-                data: contact,
-                dataType: "json",
-                encode: true,
-            })
-                .done(function (data) {
-                   
-                        Swal.fire(
-                            'Kayıt Başarılı',
-                            '',
-                            'success'
-                        ),
-                        console.log(data);
-                })
-                .fail(function (data) {
-                    Swal.fire(
-                        'Başarısız, tekrar deneyin',
-                        data,
-                        'error'
-                    ),
-                        console.log(data);
-                });
-        });
-    });
-</script>*@

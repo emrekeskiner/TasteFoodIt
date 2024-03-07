@@ -1,0 +1,128 @@
+﻿@model TasteFoodIt.Entities.Notification
+@{
+    ViewBag.Title = "CreateNotification";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Bildirim Ekle</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item">Bildirimler</li>
+            <li class="breadcrumb-item active" aria-current="page">Bildirim İşlemleri</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Form Basic -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary text-bg-primary">Ekleme Paneli</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Bildirim Açıklama</label>
+
+                            <input class="form-control" name="Description" type="text" />
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Icon</label>
+
+                            <div class="form-check">
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-code" name="Icon" id="code" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="code"><i class="fas fa-code"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-thumbs-up" name="Icon" id="thumbs-up" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="thumbs-up"><i class="fas fa-thumbs-up"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-thumbs-down" name="Icon" id="thumbs-down" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="thumbs-down"><i class="fas fa-thumbs-down"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-hashtag" name="Icon" id="hashtag" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="hashtag"><i class="fas fa-hashtag"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-gamepad" name="Icon" id="gamepad" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="gamepad"><i class="fas fa-gamepad"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-poo-storm" name="Icon" id="fa-poo-storm" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-poo-storm"><i class="fas fa-poo-storm"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-power-off" name="Icon" id="fa-power-off" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-power-off"><i class="fas fa-power-off"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-lightbulb" name="Icon" id="fa-lightbulb" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-lightbulb"><i class="fas fa-lightbulb"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-medal" name="Icon" id="fa-medal" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-medal"><i class="fas fa-medal"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-star-and-crescent" name="Icon" id="fa-star-and-crescent" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-star-and-crescent"><i class="fas fa-star-and-crescent"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-file-alt" name="Icon" id="fa-file-alt" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-file-alt"><i class="fas fa-file-alt"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-donate" name="Icon" id="fa-donate" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="fa-donate"><i class="fas fa-donate"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-exclamation-triangle" name="Icon" id="triangle" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="triangle"><i class="fas fa-exclamation-triangle"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="fa-star" name="Icon" id="star" autocomplete="off" />
+                                    <label class="btn btn-light m-md-1" for="star"><i class="fas fa-star"></i></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Renk Seçimi</label>
+                            <div class="form-check">
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="bg-danger" name="IconCircleColor" id="kirmizi" autocomplete="off" />
+                                    <label class="btn btn-danger m-md-1" for="kirmizi">Kırmızı</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="bg-warning" name="IconCircleColor" id="sari" autocomplete="off" />
+                                    <label class="btn btn-warning text-white m-md-1" for="sari">Sarı</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="bg-primary" name="IconCircleColor" id="mavi" autocomplete="off" />
+                                    <label class="btn btn-primary text-white m-md-1" for="mavi">Mavi</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="bg-success" name="IconCircleColor" id="yesil" autocomplete="off" />
+                                    <label class="btn btn-success text-white m-md-1" for="yesil">Yeşil</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="btn-check" type="radio" value="bg-secondary" name="IconCircleColor" id="gri" autocomplete="off" />
+                                    <label class="btn btn-secondary text-white m-md-1" for="gri">Gri</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

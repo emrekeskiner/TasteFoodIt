@@ -55,21 +55,22 @@
                                     durum = "bg-secondary";
                                     durumYazi = "Boş";
                                 }
-                                <tr>
-                                    <td>@count</td>
-                                    <td>@item.Name</td>
-                                    <td>@item.Email</td>
-                                    <td>@item.Phone</td>
-                                    <td>@item.ReservationDate</td>
-                                    <td>@item.Time</td>
-                                    <td>@item.GuestCount</td>
-                                    <td><a href="/Reservation/StatusChangeReservation/@item.ReservationId"> <span class="badge @durum" style="color:white">@durumYazi</span></a></td>
-                                   
-                                    <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-sm btn-danger">Sil</a></td>
-                                    <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-sm btn-success">Güncelle</a></td>
-                                </tr>
+                                
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.Name</td>
+                                <td>@item.Email</td>
+                                <td>@item.Phone</td>
+                                <td>@(((DateTime)item.ReservationDate).ToString("dd.MM.yyyy"))</td>
+                                <td>@item.Time</td>
+                                <td>@item.GuestCount</td>
+                                <td><a href="/Reservation/StatusChangeReservation/@item.ReservationId"> <span class="badge @durum" style="color:white">@durumYazi</span></a></td>
+                               
+                                <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-sm btn-danger">Sil</a></td>
+                                <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-sm btn-success">Güncelle</a></td>
+                            </tr>
                             }
-                    </table>
+</table>
                 </div>
                 <div class="card-footer"></div>
             </div>

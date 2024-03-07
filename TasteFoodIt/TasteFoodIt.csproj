@@ -4871,6 +4871,9 @@
     <Content Include="Views\Product\Products.cshtml" />
     <Content Include="Views\Reservation\ReservationList.cshtml" />
     <Content Include="Views\Notification\NotificationList.cshtml" />
+    <Content Include="Views\Reservation\UpdateReservation.cshtml" />
+    <Content Include="Views\Notification\UpdateNotification.cshtml" />
+    <Content Include="Views\Notification\CreateNotification.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

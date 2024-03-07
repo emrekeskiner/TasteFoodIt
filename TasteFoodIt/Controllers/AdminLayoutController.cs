@@ -28,8 +28,8 @@ namespace TasteFoodIt.Controllers
 
         public PartialViewResult PartialNavbar()
         {
-            var values = context.Notifications.Where(x => x.IsRead == false).ToList();
-            ViewBag.notificationCount = context.Notifications.Where(x=>x.IsRead==false).Count();
+            var values = context.Notifications.Where(x => x.IsRead == true).ToList();
+            ViewBag.notificationCount = context.Notifications.Where(x=>x.IsRead==true).Count();
             return PartialView(values);
         }
 
@@ -49,7 +49,7 @@ namespace TasteFoodIt.Controllers
             values.IsRead = true;
             context.SaveChanges();
 
-            return RedirectToAction("ProductList", "Product");
+            return RedirectToAction("NotificationList", "Notification");
         }
     }
 }

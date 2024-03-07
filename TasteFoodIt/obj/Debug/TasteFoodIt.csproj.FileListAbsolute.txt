@@ -76,13 +76,7 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\System.Web.WebPages.Razor
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\Newtonsoft.Json.xml
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\Antlr3.Runtime.pdb
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.AssemblyReference.cache
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.CoreCompileInputs.cache
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.CopyComplete
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.dll
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.pdb
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.mig1.resources
-C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.GenerateResource.cache
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.mig2.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.AddSocialMedia.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.AddStatus_SocialMedia_Class.resources
@@ -94,3 +88,8 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrati
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_NotificationEntity_colums_color.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_MailClass.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.GenerateResource.cache
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.CopyComplete
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.dll
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.pdb
