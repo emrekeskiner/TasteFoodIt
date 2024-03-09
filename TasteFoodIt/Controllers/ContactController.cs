@@ -39,7 +39,7 @@ namespace TasteFoodIt.Controllers
             mail.Status = true;
             context.Mails.Add(mail);
             context.SaveChanges();
-            SendEmail(mail.ToString());
+            SendEmail(mail.Email);
             return Json("başarılı", JsonRequestBehavior.AllowGet);
         }
 
@@ -60,7 +60,7 @@ namespace TasteFoodIt.Controllers
         {
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("rose15@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("rose15@ethereal.email"));
+            email.To.Add(MailboxAddress.Parse(mail));
             email.Subject = "TasteFoodit Haber Bülteni";
             email.Body = new TextPart(TextFormat.Html) { Text = mail+ " TasteFoodit haber aboneliğiniz başarıyla gerçekleşmiştir." };
              var smtp = new SmtpClient();
