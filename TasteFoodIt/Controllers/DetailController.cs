@@ -7,6 +7,7 @@ using TasteFoodIt.Context;
 
 namespace TasteFoodIt.Controllers
 {
+    [AllowAnonymous]
     public class DetailController : Controller
     {
         TasteContext context = new TasteContext();
