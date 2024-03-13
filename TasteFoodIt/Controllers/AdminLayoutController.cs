@@ -28,10 +28,27 @@ namespace TasteFoodIt.Controllers
 
         public PartialViewResult PartialNavbar()
         {
+            ViewBag.username = Session["nameSurname"];
+            ViewBag.imageUrl = Session["imageUrl"];
+            return PartialView();
+        }
+
+        public PartialViewResult PartialNavbarNotification()
+        {
             var values = context.Notifications.Where(x => x.IsRead == true).ToList();
-            ViewBag.notificationCount = context.Notifications.Where(x=>x.IsRead==true).Count();
+            ViewBag.notificationCount = context.Notifications.Where(x => x.IsRead == true).Count();
+
+          
             return PartialView(values);
         }
+
+        public PartialViewResult PartialNavbarContact()
+        {
+            var values = context.Contacts.Where(x => x.Status == false).ToList();
+            ViewBag.messageCount = context.Contacts.Where(x => x.Status == false).Count();
+            return PartialView(values);
+        }
+
 
         public PartialViewResult PartialFooter()
         {

@@ -117,4 +117,9 @@ C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\System.Numerics.Vectors.x
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\bin\System.ValueTuple.xml
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_class_mailbox.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.delete_MailBox_Table.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.resources
 C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.reservation_colums.resources
+C:\Users\asus\source\repos\TasteFoodIt\TasteFoodIt\obj\Debug\TasteFoodIt.Migrations.add_procedure.resources

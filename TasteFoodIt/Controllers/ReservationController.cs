@@ -18,38 +18,53 @@ namespace TasteFoodIt.Controllers
             return View(value);
         }
 
-        public ActionResult StatusChangeReservation(int id)
-        {
-            var value = context.Reservations.Find(id);
-            if (value.ReservationStatus == "Boş")
-            {
-                value.ReservationStatus = "Dolu";
-            }
-            else
-            {
-                value.ReservationStatus = "Boş";
-            }
-            context.SaveChanges();
-            return RedirectToAction("ReservationList");
-        }
 
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult CreateReservation()
         {
             return View();
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public JsonResult CreateReservation(Reservation reservation)
         {
-            reservation.ReservationStatus = "Dolu";
-            //reservation.ReservationDate
+            reservation.ReservationStatus = "beklemede";
             context.Reservations.Add(reservation);
             context.SaveChanges();
 
             return Json(reservation, JsonRequestBehavior.AllowGet);
         }
+        
+        //Reservation Onaylama
+        public ActionResult AcceptReservation(int id)
+        {
+            var reservation = context.Reservations.Find(id);
+            reservation.ReservationStatus = "onaylandi";
+            
+            context.SaveChanges();
+            return RedirectToAction("ReservationList");
+        }
+        //Reservation Bekletme
+        public ActionResult WaitReservation(int id)
+        {
+            var reservation = context.Reservations.Find(id);
+            reservation.ReservationStatus = "beklemede";
+
+            context.SaveChanges();
+            return RedirectToAction("ReservationList");
+        }
+        //Reservation İptal etme
+        public ActionResult CancelReservation(int id)
+        {
+            var reservation = context.Reservations.Find(id);
+            reservation.ReservationStatus = "iptal";
+
+            context.SaveChanges();
+            return RedirectToAction("ReservationList");
+        }
+
 
         public ActionResult DeleteReservation(int id)
         {

@@ -1,6 +1,2 @@
 ﻿
-Rezervasyon yapılacak
-Session- Admin
-Validasyon
-Dashboard Mini
-Mailkit
+

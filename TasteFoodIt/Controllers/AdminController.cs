@@ -48,10 +48,13 @@ namespace TasteFoodIt.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdateAdmin(Admin Admin)
+        public ActionResult UpdateAdmin(Admin admin)
         {
-            var value = context.Admins.Find(Admin.AdminId);
-            value.Username = Admin.Username;
+            var value = context.Admins.Find(admin.AdminId);
+           // value.Username = admin.Username;
+            value.Password = admin.Password;
+            value.NameSurname = admin.NameSurname;
+            value.ImageUrl = admin.ImageUrl;
             context.SaveChanges();
 
             return RedirectToAction("AdminList");

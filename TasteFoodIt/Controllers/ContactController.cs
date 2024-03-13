@@ -31,7 +31,7 @@ namespace TasteFoodIt.Controllers
             context.SaveChanges();
             return View(values);
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public JsonResult AddMailList(Mail mail)
         {
@@ -43,6 +43,7 @@ namespace TasteFoodIt.Controllers
             return Json("başarılı", JsonRequestBehavior.AllowGet);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public JsonResult CreateContact(Contact contact)
         {
@@ -51,23 +52,25 @@ namespace TasteFoodIt.Controllers
             contact.Status = false;
             context.Contacts.Add(contact);
             context.SaveChanges();
-
+            SendEmail(contact.Email);
             return Json("başarılı", JsonRequestBehavior.AllowGet);
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult SendEmail(string mail)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("rose15@ethereal.email"));
+            email.From.Add(MailboxAddress.Parse("malcolm.veum58@ethereal.email"));
             email.To.Add(MailboxAddress.Parse(mail));
             email.Subject = "TasteFoodit Haber Bülteni";
             email.Body = new TextPart(TextFormat.Html) { Text = mail+ " TasteFoodit haber aboneliğiniz başarıyla gerçekleşmiştir." };
              var smtp = new SmtpClient();
             smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("rose15@ethereal.email", "qgp344smXN6q3xdU9C");
+            smtp.Authenticate("malcolm.veum58@ethereal.email", "3Yx6z4AtNsXtbQFuxU");
             smtp.Send(email);
             smtp.Disconnect(true);
+
+
 
             return View();
         }

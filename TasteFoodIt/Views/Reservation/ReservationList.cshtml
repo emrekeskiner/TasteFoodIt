@@ -34,7 +34,7 @@
                                 <th>Saat</th>
                                 <th>Kişi Sayısı</th>
                                 <th>Drumu</th>
-                                <th>Sil</th>
+                                <th>İşlemler</th>
                                 <th>Güncelle</th>
                             </tr>
                         </thead>
@@ -45,17 +45,25 @@
 
                                 string durum = "";
                                 string durumYazi = "";
-                                if (item.ReservationStatus == "Dolu")
+
+                                switch (item.ReservationStatus)
                                 {
-                                    durum = "bg-danger";
-                                    durumYazi = "Dolu";
+                                    case "onaylandi":
+                                        durum = "bg-primary";
+                                        durumYazi = "Onaylandı";
+                                        break;
+                                    case "beklemede":
+                                        durum = "bg-warning";
+                                        durumYazi = "Bekliyor";
+                                        break;
+                                    case "iptal":
+                                        durum = "bg-danger";
+                                        durumYazi = "İptal";
+                                        break;
+                                    default:
+                                        break;
                                 }
-                                else
-                                {
-                                    durum = "bg-secondary";
-                                    durumYazi = "Boş";
-                                }
-                                
+
                             <tr>
                                 <td>@count</td>
                                 <td>@item.Name</td>
@@ -64,9 +72,13 @@
                                 <td>@(((DateTime)item.ReservationDate).ToString("dd.MM.yyyy"))</td>
                                 <td>@item.Time</td>
                                 <td>@item.GuestCount</td>
-                                <td><a href="/Reservation/StatusChangeReservation/@item.ReservationId"> <span class="badge @durum" style="color:white">@durumYazi</span></a></td>
+                                <td> <span class="badge @durum" style="color:white">@durumYazi</span></td>
+                                <td>
+                                    <a href="/Reservation/AcceptReservation/@item.ReservationId" class="btn btn-sm btn-primary">Onayla</a>
+                                    <a href="/Reservation/WaitReservation/@item.ReservationId" class="btn btn-sm btn-warning">Beklet</a>
+                                    <a href="/Reservation/CancelReservation/@item.ReservationId" class="btn btn-sm btn-danger">İptal Et</a>
+                                </td>
                                
-                                <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-sm btn-danger">Sil</a></td>
                                 <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-sm btn-success">Güncelle</a></td>
                             </tr>
                             }

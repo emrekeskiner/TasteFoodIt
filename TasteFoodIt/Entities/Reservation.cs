@@ -13,7 +13,7 @@ namespace TasteFoodIt.Entities
         public string Phone { get; set; }
         public DateTime ReservationDate { get; set; }
         public string Time { get; set; }
-        public string GuestCount { get; set; }
+        public int GuestCount { get; set; }
         public string ReservationStatus { get; set; }
 
     }

@@ -172,10 +172,13 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Controllers\OpenDayHourController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entities\About.cs" />
@@ -189,6 +192,7 @@
     <Compile Include="Entities\OpenDayHour.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
+    <Compile Include="Entities\Slider.cs" />
     <Compile Include="Entities\SocialMedia.cs" />
     <Compile Include="Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,7 +246,28 @@
     <Compile Include="Migrations\202403061022317_add_MailClass.designer.cs">
       <DependentUpon>202403061022317_add_MailClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403111158206_add_class_mailbox.cs" />
+    <Compile Include="Migrations\202403111158206_add_class_mailbox.designer.cs">
+      <DependentUpon>202403111158206_add_class_mailbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403121810532_delete_MailBox_Table.cs" />
+    <Compile Include="Migrations\202403121810532_delete_MailBox_Table.designer.cs">
+      <DependentUpon>202403121810532_delete_MailBox_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403121947198_add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.cs" />
+    <Compile Include="Migrations\202403121947198_add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.designer.cs">
+      <DependentUpon>202403121947198_add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403131417528_reservation_colums.cs" />
+    <Compile Include="Migrations\202403131417528_reservation_colums.designer.cs">
+      <DependentUpon>202403131417528_reservation_colums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403131649047_add_procedure.cs" />
+    <Compile Include="Migrations\202403131649047_add_procedure.designer.cs">
+      <DependentUpon>202403131649047_add_procedure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ReservationsChart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +302,7 @@
     <Content Include="Templates\ruang-admin\buttons.html" />
     <Content Include="Templates\ruang-admin\charts.html" />
     <Content Include="Templates\ruang-admin\copycontent.html" />
+    <Content Include="Templates\ruang-admin\css\logincss.css" />
     <Content Include="Templates\ruang-admin\css\ruang-admin.css" />
     <Content Include="Templates\ruang-admin\css\ruang-admin.min.css" />
     <Content Include="Templates\ruang-admin\datatables.html" />
@@ -287,6 +313,7 @@
     <Content Include="Templates\ruang-admin\img\boy.png" />
     <Content Include="Templates\ruang-admin\img\error.svg" />
     <Content Include="Templates\ruang-admin\img\girl.png" />
+    <Content Include="Templates\ruang-admin\img\icons8-message-48.png" />
     <Content Include="Templates\ruang-admin\img\innovation.svg" />
     <Content Include="Templates\ruang-admin\img\logo\logo.png" />
     <Content Include="Templates\ruang-admin\img\logo\logo2.png" />
@@ -4898,7 +4925,7 @@
     <Content Include="Views\Product\ProductList.cshtml" />
     <Content Include="Views\Product\CreateProduct.cshtml" />
     <Content Include="Views\Product\UpdateProduct.cshtml" />
-    <Content Include="Views\Dashboard\DashboardList.cshtml" />
+    <Content Include="Views\Dashboard\DashboardTest.cshtml" />
     <Content Include="Views\Default\PartialReservationDefault.cshtml" />
     <Content Include="Views\Product\Products.cshtml" />
     <Content Include="Views\Reservation\ReservationList.cshtml" />
@@ -4906,10 +4933,17 @@
     <Content Include="Views\Reservation\UpdateReservation.cshtml" />
     <Content Include="Views\Notification\UpdateNotification.cshtml" />
     <Content Include="Views\Notification\CreateNotification.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\ProfileDetail.cshtml" />
+    <Content Include="Views\Slider\SliderList.cshtml" />
+    <Content Include="Views\Slider\CreateSlider.cshtml" />
+    <Content Include="Views\Slider\UpdateSlider.cshtml" />
+    <Content Include="Views\AdminLayout\PartialNavbarNotification.cshtml" />
+    <Content Include="Views\AdminLayout\PartialNavbarContact.cshtml" />
+    <Content Include="Views\Dashboard\DashboardList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Templates\ruang-admin\.git\objects\info\" />
     <Folder Include="Templates\ruang-admin\.git\objects\pack\" />
     <Folder Include="Templates\ruang-admin\.git\refs\tags\" />
@@ -4963,6 +4997,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403061022317_add_MailClass.resx">
       <DependentUpon>202403061022317_add_MailClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403111158206_add_class_mailbox.resx">
+      <DependentUpon>202403111158206_add_class_mailbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403121810532_delete_MailBox_Table.resx">
+      <DependentUpon>202403121810532_delete_MailBox_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403121947198_add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.resx">
+      <DependentUpon>202403121947198_add_slider_class_and_AddColumns_AdminClass_NameSurname_and_ImageUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403131417528_reservation_colums.resx">
+      <DependentUpon>202403131417528_reservation_colums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403131649047_add_procedure.resx">
+      <DependentUpon>202403131649047_add_procedure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
